@@ -1,12 +1,11 @@
-package com.pedrosaez.ejemplomvvm.view
+package com.pedrosaez.ejemplomvvm.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import com.pedrosaez.ejemplomvvm.databinding.ActivityMainBinding
-import com.pedrosaez.ejemplomvvm.viewmodel.FrasesViewModel
+import com.pedrosaez.ejemplomvvm.ui.viewmodel.FrasesViewModel
 
 class MainActivity : AppCompatActivity() {
 

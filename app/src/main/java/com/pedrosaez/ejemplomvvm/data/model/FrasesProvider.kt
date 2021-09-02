@@ -1,4 +1,4 @@
-package com.pedrosaez.ejemplomvvm.model
+package com.pedrosaez.ejemplomvvm.data.model
 
 // Clase que nos sirve para obtener las frases
 class FrasesProvider {
@@ -6,8 +6,11 @@ class FrasesProvider {
     // lo ponemos comoe stático para poder acceder sin necesidad de instanciar la clase
     companion object {
 
+
+        var quotes:List<FrasesModel> = emptyList()
+
         //método que devuelve una frase al azar
-        fun random():FrasesModel {
+        /*fun random():FrasesModel {
             val position = (frase.indices).random()
             return frase[position]
         }
@@ -50,6 +53,6 @@ class FrasesProvider {
                 autor = "Anonymous"
             ),
             FrasesModel(frase = "¿A que esperas?, suscríbete.", autor = "AristiDevs")
-        )
+        )*/
     }
 }

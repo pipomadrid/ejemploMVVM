@@ -1,9 +1,9 @@
-package com.pedrosaez.ejemplomvvm.viewmodel
+package com.pedrosaez.ejemplomvvm.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.pedrosaez.ejemplomvvm.model.FrasesModel
-import com.pedrosaez.ejemplomvvm.model.FrasesProvider
+import com.pedrosaez.ejemplomvvm.data.model.FrasesModel
+import com.pedrosaez.ejemplomvvm.data.model.FrasesProvider
 
 //clase para implementar el viewmodel
 class FrasesViewModel : ViewModel() {
