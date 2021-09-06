@@ -3,7 +3,7 @@ package com.pedrosaez.ejemplomvvm.data.model
 // Clase que nos sirve para obtener las frases
 class FrasesProvider {
 
-    // lo ponemos comoe stático para poder acceder sin necesidad de instanciar la clase
+    // lo ponemos como estático para poder acceder sin necesidad de instanciar la clase
     companion object {
 
 

@@ -9,6 +9,7 @@ class FrasesRepositorio {
 
     private val api = FrasesService()
 
+    // con este método usamos la clase FrasesService para recuperar las frases y pasarlas a la variable quotes de FrasesProvider
     suspend fun getAllFrases(): List<FrasesModel> {
 
         val response = api.getFrases()
