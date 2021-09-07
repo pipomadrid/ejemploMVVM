@@ -7,17 +7,22 @@ import com.pedrosaez.ejemplomvvm.data.model.FrasesModel
 import com.pedrosaez.ejemplomvvm.data.model.FrasesProvider
 import com.pedrosaez.ejemplomvvm.domain.GetFrasesUseCase
 import com.pedrosaez.ejemplomvvm.domain.GetRandomFraseUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 //clase para implementar el viewmodel
-class FrasesViewModel : ViewModel() {
+
+/*hemos preparado la inyección de dependencias añadiendo la etiqueta @HiltViewModel y
+poniendo @Inject contructor() después del nombre de la clase.*/
+@HiltViewModel
+class FrasesViewModel @Inject constructor(private  val getFrasesUseCase :GetFrasesUseCase,
+                                          private val getRandomFraseUseCase :GetRandomFraseUseCase) : ViewModel() {
 
     //creamos un livedata de tipo frases que será observado desde mainActivity
     val fraseModel = MutableLiveData<FrasesModel>()
     val isLoading = MutableLiveData<Boolean>()
 
-    val getFrasesUseCase = GetFrasesUseCase()
-    val getRandomFraseUseCase = GetRandomFraseUseCase()
 
     fun onCreate() {
         viewModelScope.launch {

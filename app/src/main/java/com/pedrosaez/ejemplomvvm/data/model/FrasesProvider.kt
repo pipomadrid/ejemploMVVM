@@ -1,11 +1,15 @@
 package com.pedrosaez.ejemplomvvm.data.model
 
+import javax.inject.Inject
+import javax.inject.Singleton
+
 // Clase que nos sirve para obtener las frases
-class FrasesProvider {
+//poner la eiqueta singleton para que con dagger solo podamos crear una instancia del objeto
+@Singleton
+class FrasesProvider @Inject constructor(){
 
     // lo ponemos como estático para poder acceder sin necesidad de instanciar la clase
     companion object {
-
 
         var quotes:List<FrasesModel> = emptyList()
 
